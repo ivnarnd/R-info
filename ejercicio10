@@ -1,0 +1,32 @@
+{10. Programe al robot para que recorra las 5 primeras avenidas juntando en cada esquina todas las flores y papeles.}
+programa ejercicio10
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  comenzar
+    repetir 4
+      repetir 99
+        mientras(HayPapelEnLaEsquina)
+          tomarPapel
+        mientras(HayFlorEnLaEsquina)
+          tomarFlor
+        mover
+      Pos(PosAv+1,1)
+    repetir 99
+      mientras(HayPapelEnLaEsquina)
+        tomarPapel
+      mientras(HayFlorEnLaEsquina)
+        tomarFlor
+      mover
+    Informar(PosAv,PosCa)
+  fin
+variables
+  rInfo:robot1
+comenzar
+  AsignarArea(rInfo,ciudad)
+  Iniciar(rInfo,1,1)
+fin
+  
+ 
+        
