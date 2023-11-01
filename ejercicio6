@@ -1,0 +1,25 @@
+{6. Escriba un programa que le permita al robot recorrer la avenida 75 desde la calle 45
+hasta la calle 15 recogiendo todas las flores que encuentre.
+}
+programa ejercicio6
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robot1
+  comenzar
+    Pos(75,45)
+    repetir 2
+      derecha
+    mientras(PosCa > 15)
+      si HayFlorEnLaEsquina
+        tomarFlor
+      mover
+    si HayFlorEnLaEsquina
+      tomarFlor
+  fin
+variables
+  rInfo:robot1
+comenzar
+  AsignarArea(rInfo,ciudad)
+  Iniciar(rInfo,1,1)
+fin
